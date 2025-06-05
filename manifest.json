@@ -1,0 +1,12 @@
+{
+  "domain": "trannergy",
+  "name": "Trannergy",
+  "codeowners": ["@vanhooijdonk"],
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/trannergy",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "loggers": ["aiosolaredge"],
+  "requirements": [],
+  "version": "1.0.0"
+}

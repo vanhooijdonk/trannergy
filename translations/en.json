@@ -1,0 +1,25 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "device_serial_number": "The Wi-Fi device serial number",
+                    "enable_3_phase": "3-phase inverter",
+                    "inverter_serial_number": "The inverter serial number",
+                    "ip_address": "IP address of the inverter",
+                    "name": "Assign name to the inverter (used as sensors' prefix)",
+                    "port": "TCP port of the inverter",
+                    "scan_interval": "Polling period for the modbus registers (seconds)"
+                }
+            }
+        }
+    }
+}
