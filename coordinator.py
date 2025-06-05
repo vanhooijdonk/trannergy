@@ -23,7 +23,6 @@ class TrannergyUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         port: int,
         device_serial_number: int,
         inverter_serial_number: int,
-        enable_3_phase: bool,
         update_interval: timedelta,
     ) -> None:
         """Initialize."""
@@ -31,14 +30,12 @@ class TrannergyUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         self.port = port
         self.device_serial_number = device_serial_number
         self.inverter_serial_number = inverter_serial_number
-        self.enable_3_phase = enable_3_phase
 
         self.trannergy = ReadTrannergyData(
             inverter_ip=self.ip_address,
             inverter_port=self.port,
             device_serial_number=self.device_serial_number,
             inverter_serial=self.inverter_serial_number,
-            enable_3_phase=self.enable_3_phase,
         )
 
         super().__init__(hass, _LOGGER, name=DOMAIN, update_interval=update_interval)

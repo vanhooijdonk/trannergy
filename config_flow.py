@@ -16,13 +16,7 @@ from homeassistant.const import (
 from homeassistant.exceptions import HomeAssistantError
 import homeassistant.helpers.config_validation as cv
 
-from .const import (
-    CONF_DEVICE_SERIAL_NUMBER,
-    CONF_ENABLE_3_PHASE,
-    CONF_INVERTER_SERIAL_NUMBER,
-    DOMAIN,
-    NAME,
-)
+from .const import CONF_DEVICE_SERIAL_NUMBER, CONF_INVERTER_SERIAL_NUMBER, DOMAIN, NAME
 from .trannergy import ReadTrannergyData
 
 _LOGGER = logging.getLogger(__name__)
@@ -46,7 +40,6 @@ class TrannergyConfigFlow(ConfigFlow, domain=DOMAIN):
                     inverter_port=user_input.get(CONF_PORT),
                     device_serial_number=user_input.get(CONF_DEVICE_SERIAL_NUMBER),
                     inverter_serial=user_input.get(CONF_INVERTER_SERIAL_NUMBER),
-                    enable_3_phase=user_input.get(CONF_ENABLE_3_PHASE, False),
                 )
                 data = trannergy.getdata()
                 _LOGGER.info(data)
@@ -69,7 +62,6 @@ class TrannergyConfigFlow(ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_DEVICE_SERIAL_NUMBER, default=""): cv.string,
                     vol.Required(CONF_INVERTER_SERIAL_NUMBER, default=""): cv.string,
                     vol.Optional(CONF_SCAN_INTERVAL, default=60): cv.positive_int,
-                    vol.Optional(CONF_ENABLE_3_PHASE): cv.boolean,
                 }
             ),
             errors=errors,

@@ -111,36 +111,31 @@ class ReadTrannergyData:
         data["voltage_pv1"] = (
             float(int(telegram_data[66 + offset : 70 + offset], 16)) / 10.0
         )
-        if self.enable_3_phase:
-            data["voltage_pv2"] = (
-                float(int(telegram_data[70 + offset : 74 + offset], 16)) / 10.0
-            )
-            data["voltage_pv3"] = float(int(telegram_data[74:78], 16)) / 10
+        data["voltage_pv2"] = (
+            float(int(telegram_data[70 + offset : 74 + offset], 16)) / 10.0
+        )
+        data["voltage_pv3"] = float(int(telegram_data[74:78], 16)) / 10.0
         data["ampere_pv1"] = (
             float(int(telegram_data[78 + offset : 82 + offset], 16)) / 10.0
         )
-        if self.enable_3_phase:
-            data["ampere_pv2"] = (
-                float(int(telegram_data[82 + offset : 86 + offset], 16)) / 10.0
-            )
-            data["ampere_pv3"] = float(int(telegram_data[86:90], 16)) / 10
+        data["ampere_pv2"] = (
+            float(int(telegram_data[82 + offset : 86 + offset], 16)) / 10.0
+        )
+        data["ampere_pv3"] = float(int(telegram_data[86:90], 16)) / 10.0
         data["ampere_ac1"] = int(telegram_data[90 + offset : 94 + offset], 16) / 10.0
-        if self.enable_3_phase:
-            data["ampere_ac2"] = float(int(telegram_data[94:98], 16)) / 10
-            data["ampere_ac3"] = float(int(telegram_data[98:102], 16)) / 10
+        data["ampere_ac2"] = float(int(telegram_data[94:98], 16)) / 10.0
+        data["ampere_ac3"] = float(int(telegram_data[98:102], 16)) / 10.0
         data["voltage_ac1"] = (
             float(int(telegram_data[102 + offset : 106 + offset], 16)) / 10.0
         )
-        if self.enable_3_phase:
-            data["voltage_ac2"] = float(int(telegram_data[106:110], 16)) / 10
-            data["voltage_ac3"] = float(int(telegram_data[110:114], 16)) / 10
+        data["voltage_ac2"] = float(int(telegram_data[106:110], 16)) / 10.0
+        data["voltage_ac3"] = float(int(telegram_data[110:114], 16)) / 10.0
         data["frequency_ac"] = (
             float(int(telegram_data[114 + offset : 118 + offset], 16)) / 100.0
         )
         data["power_ac1"] = int(telegram_data[118 + offset : 122 + offset], 16)
-        if self.enable_3_phase:
-            data["power_ac2"] = float(int(telegram_data[122:126], 16))
-            data["power_ac3"] = float(int(telegram_data[126:130], 16))
+        data["power_ac2"] = float(int(telegram_data[122:126], 16))
+        data["power_ac3"] = float(int(telegram_data[126:130], 16))
         data["yield_today"] = int(telegram_data[138 + offset : 142 + offset], 16) * 10
         data["yield_total"] = int(telegram_data[142 + offset : 150 + offset], 16) * 100
         data["hrs_total"] = int(telegram_data[150 + offset : 158 + offset], 16)

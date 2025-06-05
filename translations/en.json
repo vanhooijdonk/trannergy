@@ -12,7 +12,6 @@
             "user": {
                 "data": {
                     "device_serial_number": "The Wi-Fi device serial number",
-                    "enable_3_phase": "3-phase inverter",
                     "inverter_serial_number": "The inverter serial number",
                     "ip_address": "IP address of the inverter",
                     "name": "Assign name to the inverter (used as sensors' prefix)",
