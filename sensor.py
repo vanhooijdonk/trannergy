@@ -46,6 +46,7 @@ class TrannergyEntityDescription(SensorEntityDescription):
 SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     TrannergyEntityDescription(
         name="Lifetime Energy",
+        icon="mdi:lightning-bolt",
         key="yield_total",
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
         state_class=SensorStateClass.TOTAL,
@@ -54,6 +55,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Today Energy",
+        icon="mdi:lightning-bolt",
         key="yield_today",
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
         state_class=SensorStateClass.TOTAL_INCREASING,
@@ -62,6 +64,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Current Power (Phase 1)",
+        icon="mdi:lightning-bolt",
         key="power_ac1",
         native_unit_of_measurement=UnitOfPower.WATT,
         state_class=SensorStateClass.MEASUREMENT,
@@ -70,6 +73,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Current Power (Phase 2)",
+        icon="mdi:lightning-bolt",
         key="power_ac2",
         native_unit_of_measurement=UnitOfPower.WATT,
         state_class=SensorStateClass.MEASUREMENT,
@@ -78,6 +82,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Current Power (Phase 3)",
+        icon="mdi:lightning-bolt",
         key="power_ac2",
         native_unit_of_measurement=UnitOfPower.WATT,
         state_class=SensorStateClass.MEASUREMENT,
@@ -86,6 +91,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Frequency",
+        icon="mdi:sine-wave",
         key="frequency_ac",
         native_unit_of_measurement=UnitOfFrequency.HERTZ,
         state_class=SensorStateClass.MEASUREMENT,
@@ -96,6 +102,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Voltage (Phase 1)",
+        icon="mdi:sine-wave",
         key="voltage_ac1",
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         state_class=SensorStateClass.MEASUREMENT,
@@ -105,6 +112,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Voltage (Phase 2)",
+        icon="mdi:sine-wave",
         key="voltage_ac2",
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         state_class=SensorStateClass.MEASUREMENT,
@@ -114,6 +122,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Voltage (Phase 3)",
+        icon="mdi:sine-wave",
         key="voltage_ac3",
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         state_class=SensorStateClass.MEASUREMENT,
@@ -123,6 +132,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Current (Phase 1)",
+        icon="mdi:current-ac",
         key="ampere_ac1",
         native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
         state_class=SensorStateClass.MEASUREMENT,
@@ -132,6 +142,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Current (Phase 2)",
+        icon="mdi:current-ac",
         key="ampere_ac2",
         native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
         state_class=SensorStateClass.MEASUREMENT,
@@ -141,6 +152,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Current (Phase 3)",
+        icon="mdi:current-ac",
         key="ampere_ac3",
         native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
         state_class=SensorStateClass.MEASUREMENT,
@@ -150,6 +162,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Temperature",
+        icon="mdi:thermometer",
         key="temperature",
         native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         state_class=SensorStateClass.MEASUREMENT,
@@ -159,6 +172,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     ),
     TrannergyEntityDescription(
         name="Total Operating Hours",
+        icon="mdi:clock",
         key="hrs_total",
         native_unit_of_measurement=UnitOfTime.HOURS,
         state_class=SensorStateClass.TOTAL,
