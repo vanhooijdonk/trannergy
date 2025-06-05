@@ -45,7 +45,7 @@ class TrannergyEntityDescription(SensorEntityDescription):
 SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
     TrannergyEntityDescription(
         key="yield_total",
-        translation_key="yield_today",
+        translation_key="yield_total",
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
         state_class=SensorStateClass.TOTAL,
         device_class=SensorDeviceClass.ENERGY,
