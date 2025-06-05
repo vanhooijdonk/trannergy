@@ -98,7 +98,6 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
         device_class=SensorDeviceClass.FREQUENCY,
         value_fn=lambda data: data.get("frequency_ac"),
         entity_category=EntityCategory.DIAGNOSTIC,
-        icon="mdi:frequency",
     ),
     TrannergyEntityDescription(
         name="Voltage (Phase 1)",
