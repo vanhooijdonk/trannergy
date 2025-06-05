@@ -47,7 +47,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
         key="yield_total",
         translation_key="yield_today",
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
-        state_class=SensorStateClass.MEASUREMENT,
+        state_class=SensorStateClass.TOTAL_INCREASING,
         device_class=SensorDeviceClass.ENERGY,
         value_fn=lambda data: data.get("yield_total"),
     ),
