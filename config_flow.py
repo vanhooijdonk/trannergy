@@ -64,14 +64,10 @@ class TrannergyConfigFlow(ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                 {
                     vol.Required(CONF_NAME, default=NAME): cv.string,
-                    vol.Required(CONF_IP_ADDRESS, default="192.168.250.173"): cv.string,
+                    vol.Required(CONF_IP_ADDRESS, default=""): cv.string,
                     vol.Optional(CONF_PORT, default=8899): cv.positive_int,
-                    vol.Required(
-                        CONF_DEVICE_SERIAL_NUMBER, default="625961790"
-                    ): cv.string,
-                    vol.Required(
-                        CONF_INVERTER_SERIAL_NUMBER, default="PVL1300N17284044"
-                    ): cv.string,
+                    vol.Required(CONF_DEVICE_SERIAL_NUMBER, default=""): cv.string,
+                    vol.Required(CONF_INVERTER_SERIAL_NUMBER, default=""): cv.string,
                     vol.Optional(CONF_SCAN_INTERVAL, default=60): cv.positive_int,
                     vol.Optional(CONF_ENABLE_3_PHASE): cv.boolean,
                 }
