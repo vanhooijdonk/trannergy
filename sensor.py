@@ -103,7 +103,7 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
         key="hrs_total",
         translation_key="hrs_total",
         native_unit_of_measurement=UnitOfTime.HOURS,
-        state_class=SensorStateClass.MEASUREMENT,
+        state_class=SensorStateClass.TOTAL,
         device_class=SensorDeviceClass.DURATION,
         value_fn=lambda data: data.get("hrs_total"),
     ),
