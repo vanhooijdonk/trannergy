@@ -26,7 +26,6 @@ class ReadTrannergyData:
         inverter_port: int,
         inverter_serial: str,
         device_serial_number: str,
-        enable_3_phase: bool,
     ) -> None:
         """Init."""
         self.__sock = None
@@ -42,9 +41,6 @@ class ReadTrannergyData:
 
         # Device serial number of the Wi-Fi module (See inverter web gui: Status -> Device information)
         self.device_serial_number = device_serial_number
-
-        # Set to True when you have a 3-phase inverter
-        self.enable_3_phase = enable_3_phase
 
     def __socket_connect(self):
         self.__sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

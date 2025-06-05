@@ -9,7 +9,6 @@ from homeassistant.core import HomeAssistant
 
 from .const import (
     CONF_DEVICE_SERIAL_NUMBER,
-    CONF_ENABLE_3_PHASE,
     CONF_INVERTER_SERIAL_NUMBER,
 )
 from .coordinator import TrannergyUpdateCoordinator
@@ -27,7 +26,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: TrannergyConfigEntry) ->
     port = entry.data.get(CONF_PORT)
     device_serial_number = entry.data.get(CONF_DEVICE_SERIAL_NUMBER)
     inverter_serial_number = entry.data.get(CONF_INVERTER_SERIAL_NUMBER)
-    enable_3_phase = entry.data.get(CONF_ENABLE_3_PHASE, False)
     update_interval = datetime.timedelta(seconds=entry.data.get(CONF_SCAN_INTERVAL))
 
     coordinator = TrannergyUpdateCoordinator(
@@ -36,7 +34,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: TrannergyConfigEntry) ->
         port,
         device_serial_number,
         inverter_serial_number,
-        enable_3_phase,
         update_interval,
     )
 

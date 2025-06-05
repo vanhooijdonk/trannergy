@@ -8,8 +8,7 @@
           "port": "TCP port of the inverter",
           "device_serial_number": "The Wi-Fi device serial number",
           "inverter_serial_number": "The inverter serial number",
-          "scan_interval": "Polling period for the modbus registers (seconds)",
-          "enable_3_phase": "3-phase inverter"
+          "scan_interval": "Polling interval (seconds)"
         }
       }
     },
