@@ -160,7 +160,6 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         device_class=SensorDeviceClass.CURRENT,
         value_fn=lambda data: data.get("ampere_ac1"),
-        entity_category=EntityCategory.DIAGNOSTIC,
     ),
     TrannergyEntityDescription(
         name="AC Current (Phase 2)",
@@ -170,7 +169,6 @@ SENSOR_TYPES: tuple[TrannergyEntityDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         device_class=SensorDeviceClass.CURRENT,
         value_fn=lambda data: data.get("ampere_ac2"),
-        entity_category=EntityCategory.DIAGNOSTIC,
     ),
     TrannergyEntityDescription(
         name="AC Current (Phase 3)",
