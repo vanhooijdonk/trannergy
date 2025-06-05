@@ -118,7 +118,9 @@ class ReadTrannergyData:
             float(int(telegram_data[82 + offset : 86 + offset], 16)) / 10.0
         )
         data["ampere_pv3"] = float(int(telegram_data[86:90], 16)) / 10.0
-        data["ampere_ac1"] = int(telegram_data[90 + offset : 94 + offset], 16) / 10.0
+        data["ampere_ac1"] = (
+            float(int(telegram_data[90 + offset : 94 + offset], 16)) / 10.0
+        )
         data["ampere_ac2"] = float(int(telegram_data[94:98], 16)) / 10.0
         data["ampere_ac3"] = float(int(telegram_data[98:102], 16)) / 10.0
         data["voltage_ac1"] = (
@@ -129,7 +131,7 @@ class ReadTrannergyData:
         data["frequency_ac"] = (
             float(int(telegram_data[114 + offset : 118 + offset], 16)) / 100.0
         )
-        data["power_ac1"] = int(telegram_data[118 + offset : 122 + offset], 16)
+        data["power_ac1"] = float(int(telegram_data[118 + offset : 122 + offset], 16))
         data["power_ac2"] = float(int(telegram_data[122:126], 16))
         data["power_ac3"] = float(int(telegram_data[126:130], 16))
         data["yield_today"] = int(telegram_data[138 + offset : 142 + offset], 16) * 10
