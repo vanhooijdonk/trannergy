@@ -7,10 +7,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_IP_ADDRESS, CONF_PORT, CONF_SCAN_INTERVAL, Platform
 from homeassistant.core import HomeAssistant
 
-from .const import (
-    CONF_DEVICE_SERIAL_NUMBER,
-    CONF_INVERTER_SERIAL_NUMBER,
-)
+from .const import CONF_DEVICE_SERIAL_NUMBER, CONF_INVERTER_SERIAL_NUMBER
 from .coordinator import TrannergyUpdateCoordinator
 
 _LOGGER = logging.getLogger(__name__)
