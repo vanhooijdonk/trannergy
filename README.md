@@ -15,7 +15,7 @@ Add integration and fill in the needed fields:
 - Name
     - Leave default or change if needed
 - IP address of the inverter
-    - Configure wifi if needed: https://www.apsolar.nl/wp-content/uploads/trannergy_wifi_instellen.pdf
+    - Configure wifi if needed: [https://www.apsolar.nl/wp-content/uploads/trannergy_wifi_instellen.pdf](https://manualzz.com/doc/6459976/trannergy-wifi-module-user-manual)
 - TCP port of the inverter
     - Defaults to 8899
 - The Wi-Fi device serial number
